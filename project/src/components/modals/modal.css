@@ -1,0 +1,30 @@
+.cardModal {
+    background-color: #FFFDFD;
+    border-radius: 8px;
+    height: 563px;
+    width: 476px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.cardUpdate {
+    width: 494px;
+}
+
+.cardModal img {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.cardModal h2 {
+    margin-bottom: 40px;
+}
+
+.btn-clean {
+    margin-top: 8px;
+}

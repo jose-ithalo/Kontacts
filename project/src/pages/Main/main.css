@@ -1,0 +1,25 @@
+.container-main {
+    min-height: 100vh;
+}
+
+.sub-container {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 100px;
+    padding: 0px 200px 80px 200px;
+}
+
+.title-contact {
+    background-color: #F4F0F0;
+    font-size: 12px;
+    font-weight: 700;
+    height: 45px;
+    width: 956px;
+    display: flex;
+    align-items: center;
+    gap: 215px;
+    margin: 45px 0px 40px 0px;
+}
+
+.title-contact span {
+    margin-left: 32px;
+}

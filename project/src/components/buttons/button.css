@@ -1,0 +1,11 @@
+.btn-form:hover {
+    opacity: 0.9;
+}
+
+.btn-green {
+    background-color: #04C45C !important;
+}
+
+.btn-red {
+    background: #FB0615A6 !important;
+}

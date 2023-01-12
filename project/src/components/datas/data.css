@@ -1,0 +1,25 @@
+.contact-info {
+    background-color: #FFFAFA;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.contact-info span {
+    width: 250px;
+    margin-left: 28px;
+}
+
+.icons-area {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 25px;
+}
+
+.icons-area img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}

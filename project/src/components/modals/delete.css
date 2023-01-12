@@ -1,0 +1,28 @@
+.card-delete {
+    background-color: #FFFDFD;
+    border-radius: 8px;
+    height: 319px;
+    width: 477px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.card-delete img {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.card-delete span {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 24px 0px 30px 0px;
+}
+
+.delete-btn {
+    margin-bottom: 10px;
+}
