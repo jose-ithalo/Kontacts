@@ -6,6 +6,7 @@ import DataApi from '../../components/datas/data';
 import ModalCardAdd from '../../components/modals/add';
 import DeleteModal from '../../components/modals/delete';
 import UpdateModal from '../../components/modals/update';
+import Loading from '../../components/loading/loading';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
@@ -16,6 +17,7 @@ function MainPage() {
 
     const { contactList, setContactList } = useContext(UserContext);
 
+    const [showLoading, setShowLoading] = useState(false);
     const [stateModalAdd, setStateModalAdd] = useState(false);
     const [stateModalDel, setStateModalDel] = useState(false);
     const [stateModalUp, setStateModalUp] = useState(false);
@@ -45,6 +47,7 @@ function MainPage() {
     }
 
     useEffect(() => {
+        setShowLoading(true);
         showContacts();
         // eslint-disable-next-line
     }, []);
@@ -66,7 +69,7 @@ function MainPage() {
                     <div key={data.id}>
                         <DataApi setStateModalDel={setStateModalDel} setStateModalUp={setStateModalUp} name={data.nome}
                             email={data.email} phone={data.telefone} key={data.id} id={data.id}
-                            setInfoContact={setInfoContact} />
+                            setInfoContact={setInfoContact} setShowLoading={setShowLoading} />
                     </div>
                 ))}
 
@@ -79,7 +82,9 @@ function MainPage() {
                 showContacts={showContacts} />}
 
             {stateModalUp && <UpdateModal setStateModalUp={setStateModalUp} Updated={infoContact}
-                showContacts={showContacts} />}
+                setShowLoading={setShowLoading} showContacts={showContacts} />}
+
+            {showLoading && <Loading time={2000} />}
         </div>
     )
 }
