@@ -8,11 +8,9 @@ import UserContext from '../../context/userContext';
 import { useContext } from 'react';
 import api from '../../services/api';
 
-function UpdateModal({ setStateModalUp, showContacts, Updated }) {
+function UpdateModal({ setStateModalUp, setShowLoading, showContacts, Updated }) {
 
     const { forms, setForms } = useContext(UserContext);
-
-    console.log(forms);
 
     async function handleUpdate(evt) {
         evt.preventDefault();
@@ -22,8 +20,6 @@ function UpdateModal({ setStateModalUp, showContacts, Updated }) {
                 alert('Preencha pelo menos um campo.');
                 return
             }
-
-            console.log('teste');
 
             const token = localStorage.getItem('token');
             await api.put(`/contatos/${Updated.id}`, {
@@ -38,6 +34,8 @@ function UpdateModal({ setStateModalUp, showContacts, Updated }) {
                 }
             )
 
+            setShowLoading(true);
+
             showContacts();
 
             setForms({
@@ -50,6 +48,12 @@ function UpdateModal({ setStateModalUp, showContacts, Updated }) {
 
         } catch (error) {
             console.log(error.message);
+        }
+
+        finally {
+            setTimeout(() => {
+                setShowLoading(false);
+            }, 800)
         }
     }
 

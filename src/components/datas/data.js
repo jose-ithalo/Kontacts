@@ -5,7 +5,8 @@ import trashIcon from '../../assets/trash.svg';
 import UserContext from '../../context/userContext';
 import { useContext } from 'react';
 
-function DataApi({ setStateModalDel, setStateModalUp, name, email, phone, id, setInfoContact }) {
+function DataApi({ setStateModalDel, setStateModalUp, name, email,
+    phone, id, setInfoContact, setShowLoading }) {
 
     const { setForms } = useContext(UserContext);
 
@@ -27,6 +28,8 @@ function DataApi({ setStateModalDel, setStateModalUp, name, email, phone, id, se
                     });
 
                     setStateModalUp(true)
+
+                    setShowLoading(false)
                 }} />
 
                 <img src={trashIcon} alt='lixeira' onClick={() => {
