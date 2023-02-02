@@ -46,6 +46,12 @@ function MainPage() {
         }
     }
 
+    async function callModalAdd() {
+        setStateModalAdd(true);
+
+        setShowLoading(false);
+    }
+
     useEffect(() => {
         setShowLoading(true);
         showContacts();
@@ -56,7 +62,7 @@ function MainPage() {
         <div className="container-main ">
             <ButtonAppBar />
             <div className='sub-container'>
-                <div onClick={() => setStateModalAdd(true)}>
+                <div onClick={() => callModalAdd()}>
                     <BasicButtons variant='contained' action='Adicionar' btnState={true} length={235} stature={50} />
                 </div>
                 <div className='title-contact'>
@@ -75,11 +81,11 @@ function MainPage() {
 
             </div>
 
-            {stateModalAdd && <ModalCardAdd setStateModalAdd={setStateModalAdd}
+            {stateModalAdd && <ModalCardAdd setStateModalAdd={setStateModalAdd} setShowLoading={setShowLoading}
                 showContacts={showContacts} />}
 
             {stateModalDel && <DeleteModal setStateModalDel={setStateModalDel} Deleted={infoContact}
-                showContacts={showContacts} />}
+                setShowLoading={setShowLoading} showContacts={showContacts} />}
 
             {stateModalUp && <UpdateModal setStateModalUp={setStateModalUp} Updated={infoContact}
                 setShowLoading={setShowLoading} showContacts={showContacts} />}
