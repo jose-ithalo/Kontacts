@@ -4,7 +4,7 @@ import btnClose from '../../assets/btn-close.svg';
 import BasicButtons from '../buttons/button';
 import api from '../../services/api';
 
-function DeleteModal({ setStateModalDel, Deleted, showContacts }) {
+function DeleteModal({ setStateModalDel, setShowLoading, Deleted, showContacts }) {
 
     async function deleteContact() {
 
@@ -17,12 +17,20 @@ function DeleteModal({ setStateModalDel, Deleted, showContacts }) {
                 }
             });
 
+            setShowLoading(true);
+
             showContacts()
 
             setStateModalDel(false);
 
         } catch (error) {
             console.log(error);
+        }
+
+        finally {
+            setTimeout(() => {
+                setShowLoading(false);
+            }, 800)
         }
 
     }

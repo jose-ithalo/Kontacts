@@ -8,7 +8,7 @@ import UserContext from '../../context/userContext';
 import { useContext } from 'react';
 import api from '../../services/api';
 
-function ModalCardAdd({ setStateModalAdd, showContacts }) {
+function ModalCardAdd({ setStateModalAdd, setShowLoading, showContacts }) {
 
     const { forms, setForms } = useContext(UserContext);
 
@@ -22,7 +22,7 @@ function ModalCardAdd({ setStateModalAdd, showContacts }) {
             }
 
             const token = localStorage.getItem('token');
-            const response = await api.post('/contatos', {
+            await api.post('/contatos', {
                 nome: forms.name,
                 telefone: forms.phone,
                 email: forms.email
@@ -34,7 +34,7 @@ function ModalCardAdd({ setStateModalAdd, showContacts }) {
                 }
             )
 
-            console.log(response.data);
+            setShowLoading(true);
 
             showContacts();
 
@@ -47,7 +47,13 @@ function ModalCardAdd({ setStateModalAdd, showContacts }) {
             setStateModalAdd(false);
 
         } catch (error) {
-            console.log(error.message);
+            console.log(error.message.response);
+        }
+
+        finally {
+            setTimeout(() => {
+                setShowLoading(false);
+            }, 800)
         }
     }
 
