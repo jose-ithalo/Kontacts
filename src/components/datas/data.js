@@ -27,9 +27,9 @@ function DataApi({ setStateModalDel, setStateModalUp, name, email,
                         id
                     });
 
-                    setStateModalUp(true)
+                    setStateModalUp(true);
 
-                    setShowLoading(false)
+                    setShowLoading(false);
                 }} />
 
                 <img src={trashIcon} alt='lixeira' onClick={() => {
@@ -39,7 +39,9 @@ function DataApi({ setStateModalDel, setStateModalUp, name, email,
                         email,
                         telefone: phone
                     });
-                    setStateModalDel(true)
+                    setStateModalDel(true);
+
+                    setShowLoading(false);
                 }} />
             </div>
         </div>
