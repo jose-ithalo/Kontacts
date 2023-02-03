@@ -7,6 +7,7 @@ import ModalCardAdd from '../../components/modals/add';
 import DeleteModal from '../../components/modals/delete';
 import UpdateModal from '../../components/modals/update';
 import Loading from '../../components/loading/loading';
+import LoadLogout from '../../components/loading/loadLogout';
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
@@ -15,7 +16,7 @@ import { useContext } from 'react';
 
 function MainPage() {
 
-    const { contactList, setContactList } = useContext(UserContext);
+    const { contactList, setContactList, logout } = useContext(UserContext);
 
     const [showLoading, setShowLoading] = useState(false);
     const [stateModalAdd, setStateModalAdd] = useState(false);
@@ -91,6 +92,8 @@ function MainPage() {
                 setShowLoading={setShowLoading} showContacts={showContacts} />}
 
             {showLoading && <Loading time={2000} />}
+
+            {logout && <LoadLogout />}
         </div>
     )
 }
