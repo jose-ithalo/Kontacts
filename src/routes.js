@@ -28,6 +28,8 @@ function MainRoutes() {
         phone: ''
     });
 
+    const [logout, setLogout] = useState(false);
+
     const [contactList, setContactList] = useState([]);
 
     const [value, setValue] = useLocalStorage('user');
@@ -36,7 +38,8 @@ function MainRoutes() {
     return (
         <UserContext.Provider value={{
             navigate, errorAlert, setErrorAlert, successAlert, setSuccessAlert,
-            forms, setForms, contactList, setContactList, value, setValue
+            forms, setForms, contactList, setContactList, value, setValue,
+            logout, setLogout
         }}>
             <Routes>
                 <Route path='/' element={<Login />} />
