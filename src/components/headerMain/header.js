@@ -13,13 +13,17 @@ import { useContext } from 'react';
 
 export default function ButtonAppBar() {
 
-    const { navigate } = useContext(UserContext);
+    const { navigate, setLogout } = useContext(UserContext);
 
     function handleLogout() {
 
-        navigate('/');
+        setLogout(true);
 
-        localStorage.clear();
+        setTimeout(() => {
+            setLogout(false);
+            localStorage.clear();
+            navigate('/');
+        }, 3500);
 
     }
 
