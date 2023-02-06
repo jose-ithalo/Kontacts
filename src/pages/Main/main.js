@@ -6,6 +6,8 @@ import DataApi from '../../components/datas/data';
 import ModalCardAdd from '../../components/modals/add';
 import DeleteModal from '../../components/modals/delete';
 import UpdateModal from '../../components/modals/update';
+import { InputBase } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import Loading from '../../components/loading/loading';
 import LoadLogout from '../../components/loading/loadLogout';
 import { useEffect, useState } from 'react';
@@ -63,9 +65,20 @@ function MainPage() {
         <div className="container-main ">
             <ButtonAppBar />
             <div className='sub-container'>
-                <div onClick={() => callModalAdd()}>
-                    <BasicButtons variant='contained' action='Adicionar' btnState={true} length={235} stature={50} />
+                <div className='action-list'>
+
+                    <div onClick={() => callModalAdd()}>
+                        <BasicButtons variant='contained' action='Adicionar' btnState={true} length={235} stature={50} />
+                    </div>
+
+                    <InputBase
+                        className='input-search'
+                        placeholder='Pesquisar'
+                        endAdornment={<SearchIcon />}
+                    />
+
                 </div>
+
                 <div className='title-contact'>
                     <span>Nome</span>
                     <span>Email</span>
