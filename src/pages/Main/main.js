@@ -36,7 +36,7 @@ function MainPage() {
 
     const filteredContacts = search.length > 0 ?
         contactList.filter(function (data) {
-            return data.nome.toLowerCase().includes(search)
+            return data.nome.toLowerCase().includes(search.toLowerCase());
         }) : [];
 
     async function showContacts() {
