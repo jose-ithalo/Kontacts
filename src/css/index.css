@@ -18,6 +18,10 @@ code {
     monospace;
 }
 
+/* html {
+  font-size: 62.5%;
+} */
+
 .cardModal-container {
   background: rgba(61, 61, 61, 0.478);
   font-family: 'Roboto', sans-serif;

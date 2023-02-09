@@ -1,0 +1,13 @@
+@media (max-width: 1110px) {
+    .MuiTextField-root {
+        width: 350px;
+    }
+
+    .MuiBox-root {
+        width: 0px;
+    }
+
+    .css-e53awj-MuiStack-root {
+        width: 350px;
+    }
+}

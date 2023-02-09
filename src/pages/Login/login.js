@@ -65,10 +65,11 @@ function Login() {
         <div className="container-form">
             <div className='img-area-left'></div>
             <div className='login-form'>
-                <h3>Bem vindo</h3>
-                <h1>Faça o login com sua conta</h1>
 
                 <form onSubmit={enterMain}>
+                    <h3>Bem vindo</h3>
+                    <h1>Faça o login com sua conta</h1>
+
                     <BasicTextFields inputName={false} inputPassword={true} inputPhone={false} length={470} />
 
                     {errorAlert && <p className='error-alert'>Senha ou Email incorreto</p>}
