@@ -1,4 +1,5 @@
 import './login.css';
+import '../../css/mobile.css';
 
 import api from '../../services/api';
 import BasicTextFields from '../../components/forms/form';
