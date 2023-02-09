@@ -4,7 +4,17 @@
     }
 
     .login-form {
+        background-image: url('../assets/LeftImage.jpg');
+        /* margin-left: 0px; */
         width: 100%;
+    }
+
+    .login-form h1 {
+        color: rgb(226, 137, 151);
+    }
+
+    .login-form h3 {
+        color: white;
     }
 }
 
@@ -23,6 +33,6 @@
     }
 
     .login-form {
-        margin-left: 10px;
+        padding-left: 10px;
     }
 }
