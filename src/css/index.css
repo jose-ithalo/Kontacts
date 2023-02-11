@@ -53,12 +53,12 @@ code {
 .inputs-fields {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin: 0px 0px 70px 0px !important;
+  margin-bottom: 70px !important;
 }
 
 .input-form {
   background: linear-gradient(0deg, #E8E8E8, #E8E8E8), linear-gradient(0deg, #FDFAFA, #FDFAFA);
+  margin-bottom: 15px !important;
 }
 
 .question {
