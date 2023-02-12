@@ -1,4 +1,13 @@
+@media (max-height: 430px) {
+
+    .container-form {
+        height: 100%;
+    }
+
+}
+
 @media (max-height: 480px) {
+
     .signIn-form h2 {
         margin-bottom: 0px;
     }
@@ -17,7 +26,7 @@
     }
 
     .signIn-form h2 {
-        color: #fff;
+        color: rgb(191, 236, 236)
     }
 
     .headline-page {
