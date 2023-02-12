@@ -1,4 +1,5 @@
 import './signIn.css';
+import '../../css/mobile2.css';
 
 import api from '../../services/api';
 import BasicTextFields from '../../components/forms/form';
@@ -59,26 +60,28 @@ function SignIn() {
 
     return (
         <div className="container-form">
+
             <div className='signIn-form'>
 
-                <h2>Cadastre-se</h2>
-                <div className='btn-signIn'>
-                    <form onSubmit={handleAddUser}>
-                        <BasicTextFields inputName={true} inputPassword={true} inputPhone={false} length={470} />
+                <form onSubmit={handleAddUser}>
+                    <h2>Cadastre-se</h2>
+                    <BasicTextFields inputName={true} inputPassword={true} inputPhone={false} length={470} />
 
-                        {errorAlert && <p className='error-alert'>Email ou senha já cadastrados.</p>}
+                    {errorAlert && <p className='error-alert'>Email ou senha já cadastrados.</p>}
 
+                    <div className='btn-signIn'>
                         <BasicButtons variant='contained' action='CADASTRAR' btnState={true} length={470} stature={50} />
-                    </form>
 
-                    <div onClick={() => navigate('/')}>
-                        <BasicButtons variant='contained' action='CANCELAR' btnState={false} length={470} stature={50} />
+                        <div onClick={() => navigate('/')}>
+                            <BasicButtons variant='contained' action='CANCELAR' btnState={false} length={470} stature={50} />
+                        </div>
 
                     </div>
-                </div>
+                </form>
+
 
                 <div className='question' onClick={() => navigate('/')} >
-                    <span>Já tem cadastro?</span>
+                    <span className='headline-page'>Já tem cadastro?</span>
                     <BasicButtons variant='text' action='Clique aqui!' btnState={true} />
                 </div>
             </div>
