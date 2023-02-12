@@ -20,6 +20,11 @@
 
 @media (max-height: 425px) {
 
+    .error-alert,
+    .success-alert {
+        margin: 0px 0px 15px 10px;
+    }
+
     .inputs-fields {
         margin-bottom: 0px !important;
     }
