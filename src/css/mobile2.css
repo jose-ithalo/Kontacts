@@ -1,0 +1,32 @@
+@media (max-height: 480px) {
+    .signIn-form h2 {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 755px) {
+    .img-area-rigth {
+        display: none;
+    }
+
+    .signIn-form {
+        background-image: url('../assets/RightImage.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .signIn-form h2 {
+        color: #fff;
+    }
+
+    .headline-page {
+        color: #fff;
+    }
+}
+
+@media (max-width: 1110px) {
+    .signIn-form {
+        padding-right: 10px;
+    }
+}
