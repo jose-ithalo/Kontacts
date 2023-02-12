@@ -79,7 +79,6 @@ function SignIn() {
                     </div>
                 </form>
 
-
                 <div className='question' onClick={() => navigate('/')} >
                     <span className='headline-page'>Já tem cadastro?</span>
                     <BasicButtons variant='text' action='Clique aqui!' btnState={true} />
