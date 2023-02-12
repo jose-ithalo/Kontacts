@@ -38,7 +38,7 @@ export default function BasicTextFields({ inputName, inputPassword, inputPhone, 
 
                 {inputPassword && <TextField id="outlined-basic" label="Senha" variant="outlined"
                     type='password' className='input-form' name='password' value={forms.password}
-                    required onChange={(event) => changeInputValue(event)} />}
+                    onChange={(event) => changeInputValue(event)} />}
 
                 {inputPhone && <TextField id="outlined-basic" label="Telefone" variant="outlined"
                     type='tel' pattern='^\d[0-9]{2}.[0-9]{5}-[0-9]{4}' className='input-form'
