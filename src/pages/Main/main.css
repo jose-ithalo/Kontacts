@@ -5,18 +5,19 @@
 .action-list {
     display: flex;
     align-items: center;
-    gap: 3rem;
 }
 
 .input-search {
+    background: rgb(240, 236, 236);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 rgba(218, 1, 117, 0.05);
     height: 3rem;
     width: 20rem;
+    margin-bottom: 0.75rem;
+    margin-left: 2rem;
     padding: 0.7rem 0.8rem;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 0 4px 0 rgba(218, 1, 117, 0.05);
 
-    background: rgb(240, 236, 236);
 }
 
 .sub-container {
@@ -30,7 +31,7 @@
     font-size: 12px;
     font-weight: 700;
     height: 45px;
-    width: 606px;
+    width: 806px;
     display: flex;
     align-items: center;
     gap: 215px;

@@ -35,7 +35,10 @@
 }
 
 @media (max-width: 1110px) {
+
     .signIn-form {
         padding-right: 10px;
     }
+
+
 }

@@ -1,4 +1,5 @@
-import './main.css'
+import './main.css';
+import '../../css/mobile3.css';
 
 import ButtonAppBar from "../../components/headerMain/header";
 import BasicButtons from '../../components/buttons/button';
@@ -74,7 +75,7 @@ function MainPage() {
             <div className='sub-container'>
                 <div className='action-list'>
 
-                    <div onClick={() => callModalAdd()}>
+                    <div className='btn-add' onClick={() => callModalAdd()}>
                         <BasicButtons variant='contained' action='Adicionar' btnState={true} length={235} stature={50} />
                     </div>
 
