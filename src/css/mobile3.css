@@ -1,0 +1,13 @@
+@media (max-width: 1110px) {
+    .btn-add {
+        width: 150px;
+    }
+
+    .signIn-form {
+        padding-right: 10px;
+    }
+
+    .sub-container {
+        padding: 0px 30px 0px 30px;
+    }
+}
