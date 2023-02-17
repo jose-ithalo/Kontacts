@@ -8,7 +8,7 @@ import UserContext from '../../context/userContext';
 import { useContext } from 'react';
 import api from '../../services/api';
 
-function UpdateModal({ setStateModalUp, setShowLoading, showContacts, Updated }) {
+function UpdateModal({ setStateModalUp, setShowLoading, showContacts, UpdatedId }) {
 
     const { forms, setForms } = useContext(UserContext);
 
@@ -22,7 +22,7 @@ function UpdateModal({ setStateModalUp, setShowLoading, showContacts, Updated })
             }
 
             const token = localStorage.getItem('token');
-            await api.put(`/contatos/${Updated.id}`, {
+            await api.put(`/contatos/${UpdatedId}`, {
                 nome: forms.name,
                 email: forms.email,
                 telefone: forms.phone

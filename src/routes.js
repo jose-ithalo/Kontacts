@@ -34,11 +34,25 @@ function MainRoutes() {
 
     const [value, setValue] = useLocalStorage('user');
 
+    const [infoContact, setInfoContact] = useState({
+        id: '',
+        nome: '',
+        email: '',
+        telefone: 0
+    });
+
+    const [stateModalDel, setStateModalDel] = useState(false);
+    const [stateModalUp, setStateModalUp] = useState(false);
+
+    const [showLoading, setShowLoading] = useState(false);
+
 
     return (
         <UserContext.Provider value={{
             navigate, errorAlert, setErrorAlert, successAlert, setSuccessAlert,
             forms, setForms, contactList, setContactList, value, setValue,
+            infoContact, setInfoContact, stateModalDel, setStateModalDel,
+            stateModalUp, setStateModalUp, showLoading, setShowLoading,
             logout, setLogout
         }}>
             <Routes>

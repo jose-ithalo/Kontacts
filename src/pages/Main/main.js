@@ -3,10 +3,12 @@ import '../../css/mobile3.css';
 
 import ButtonAppBar from "../../components/headerMain/header";
 import BasicButtons from '../../components/buttons/button';
-import DataApi from '../../components/datas/data';
+// import DataApi from '../../components/datas/data';
 import ModalCardAdd from '../../components/modals/add';
 import DeleteModal from '../../components/modals/delete';
 import UpdateModal from '../../components/modals/update';
+import ContactsTable from '../../components/tableMain/table';
+
 import { InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Loading from '../../components/loading/loading';
@@ -19,26 +21,18 @@ import { useContext } from 'react';
 
 function MainPage() {
 
-    const { contactList, setContactList, logout } = useContext(UserContext);
+    const { setContactList, infoContact,
+        stateModalDel, setStateModalDel, stateModalUp,
+        setStateModalUp, showLoading, setShowLoading, logout } = useContext(UserContext);
 
-    const [showLoading, setShowLoading] = useState(false);
     const [stateModalAdd, setStateModalAdd] = useState(false);
-    const [stateModalDel, setStateModalDel] = useState(false);
-    const [stateModalUp, setStateModalUp] = useState(false);
 
-    const [infoContact, setInfoContact] = useState({
-        id: '',
-        nome: '',
-        email: '',
-        telefone: 0
-    });
+    // const [search, setSearch] = useState('');
 
-    const [search, setSearch] = useState('');
-
-    const filteredContacts = search.length > 0 ?
-        contactList.filter(function (data) {
-            return data.nome.toLowerCase().includes(search.toLowerCase());
-        }) : [];
+    // const filteredContacts = search.length > 0 ?
+    //     contactList.filter(function (data) {
+    //         return data.nome.toLowerCase().includes(search.toLowerCase());
+    //     }) : [];
 
     async function showContacts() {
 
@@ -83,18 +77,14 @@ function MainPage() {
                         className='input-search'
                         placeholder='Pesquisar'
                         endAdornment={<SearchIcon />}
-                        onChange={(evt) => setSearch(evt.target.value)}
+                    // onChange={(evt) => setSearch(evt.target.value)}
                     />
 
                 </div>
 
-                <div className='title-contact'>
-                    <span>Nome</span>
-                    <span>Email</span>
-                    <span>Telefone</span>
-                </div>
+                <ContactsTable />
 
-                {search.length > 0 ?
+                {/* {search.length > 0 ?
 
                     filteredContacts.map((data) => (
                         <div key={data.id}>
@@ -110,7 +100,7 @@ function MainPage() {
                                 email={data.email} phone={data.telefone} key={data.id} id={data.id}
                                 setInfoContact={setInfoContact} setShowLoading={setShowLoading} />
                         </div>
-                    ))}
+                    ))} */}
 
             </div>
 
@@ -120,7 +110,7 @@ function MainPage() {
             {stateModalDel && <DeleteModal setStateModalDel={setStateModalDel} Deleted={infoContact}
                 setShowLoading={setShowLoading} showContacts={showContacts} />}
 
-            {stateModalUp && <UpdateModal setStateModalUp={setStateModalUp} Updated={infoContact}
+            {stateModalUp && <UpdateModal setStateModalUp={setStateModalUp} UpdatedId={infoContact}
                 setShowLoading={setShowLoading} showContacts={showContacts} />}
 
             {showLoading && <Loading time={2000} />}
