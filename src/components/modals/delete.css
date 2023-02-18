@@ -26,3 +26,36 @@
 .delete-btn {
     margin-bottom: 10px;
 }
+
+@media (max-height: 380px) {
+    .card-delete {
+        height: 280px;
+    }
+
+    .cardModal-container {
+        align-items: flex-end;
+    }
+
+    .delete-btn {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .delete-btn,
+    .cancel-delete {
+        width: 260px;
+    }
+}
+
+@media (max-width: 500px) {
+    .card-delete {
+        margin: 0px 10px;
+        width: 50rem;
+    }
+
+    .card-delete img {
+        top: 10px
+    }
+}
