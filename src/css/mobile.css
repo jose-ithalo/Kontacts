@@ -1,4 +1,4 @@
-@media (max-width: 372px) {
+@media (max-width: 379px) {
     .MuiTextField-root {
         width: 260px;
     }
@@ -6,9 +6,13 @@
     .MuiButton-contained {
         width: 260px !important;
     }
+
+    .MuiBackdrop-root {
+        font-size: 12px;
+    }
 }
 
-@media (min-width: 373px) and (max-width: 1110px) {
+@media (min-width: 380px) and (max-width: 1110px) {
     .MuiTextField-root {
         width: 350px;
     }
@@ -38,6 +42,12 @@
 @media (min-height: 426px) {
     .inputs-fields {
         margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 585px) {
+    .MuiBackdrop-root {
+        text-align: center;
     }
 }
 
