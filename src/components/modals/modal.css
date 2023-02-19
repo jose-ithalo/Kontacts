@@ -1,17 +1,19 @@
+.btn-clean {
+    margin-top: 8px;
+}
+
 .cardModal {
     background-color: #FFFDFD;
     border-radius: 8px;
-    height: 563px;
+    height: 80%;
     width: 476px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    margin: 20px;
+    padding: 5px;
     position: relative;
 }
 
-.cardUpdate {
-    width: 494px;
+.cardModal h2 {
+    margin-bottom: 40px;
 }
 
 .cardModal img {
@@ -21,10 +23,22 @@
     right: 25px;
 }
 
-.cardModal h2 {
-    margin-bottom: 40px;
+.cardUpdate {
+    width: 494px;
 }
 
-.btn-clean {
-    margin-top: 8px;
+.content-card {
+    min-height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-height: 600px) {
+    .cardModal {
+        height: 70%;
+        overflow-y: scroll;
+    }
 }

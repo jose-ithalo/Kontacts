@@ -73,18 +73,21 @@ function ModalCardAdd({ setStateModalAdd, setShowLoading, showContacts }) {
     return (
         <div className='cardModal-container'>
             <div className='cardModal'>
-                <img src={btnClose} alt='Botão X' onClick={() => handleClearInputs()} />
-                <h2>Novo Contato</h2>
+                <div className='content-card'>
 
-                <form onSubmit={handleAddContact}>
-                    <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} length={364} />
-                    <BasicButtons variant='contained' action='Adicionar' btnState={true} length={364} stature={50} />
-                </form>
+                    <img src={btnClose} alt='Botão X' onClick={() => handleClearInputs()} />
+                    <h2>Novo Contato</h2>
 
-                <div className='btn-clean' onClick={() => handleClearInputs()}>
-                    <BasicButtons variant='contained' action='Limpar' btnState={false} length={364} stature={50} />
+                    <form onSubmit={handleAddContact}>
+                        <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} length={364} />
+                        <BasicButtons variant='contained' action='Adicionar' btnState={true} length={364} stature={50} />
+                    </form>
+
+                    <div className='btn-clean' onClick={() => handleClearInputs()}>
+                        <BasicButtons variant='contained' action='Limpar' btnState={false} length={364} stature={50} />
+                    </div>
+
                 </div>
-
             </div>
         </div>
     )
