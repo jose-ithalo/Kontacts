@@ -66,25 +66,32 @@ function UpdateModal({ setStateModalUp, setShowLoading, showContacts, UpdatedId 
             phone: ''
         });
 
-        setStateModalUp(false)
-
     }
 
     return (
         <div className='cardModal-container'>
-            <div className='cardModal cardUpdate'>
-                <img src={btnClose} alt='Botão X' onClick={() => handleClearInputs()} />
-                <h2>Editar contato</h2>
+            <div className='cardModal'>
+                <div className='content-card'>
 
-                <form onSubmit={handleUpdate}>
-                    <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} length={364} />
-                    <BasicButtons variant='contained' action='Salvar' btnState={true} length={364} stature={50} />
-                </form>
+                    <img src={btnClose} alt='Botão X' onClick={() => {
+                        handleClearInputs();
+                        setStateModalUp(false);
+                    }} />
 
-                <div className='btn-clean' onClick={() => handleClearInputs()}>
-                    <BasicButtons variant='contained' action='Limpar' btnState={false} length={364} stature={50} />
+                    <h2>Editar contato</h2>
+
+                    <div>
+                        <form onSubmit={handleUpdate}>
+                            <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} length={364} />
+                            <BasicButtons variant='contained' action='Adicionar' btnState={true} length={364} stature={50} />
+                        </form>
+
+                        <div className='btn-clean' onClick={() => handleClearInputs()}>
+                            <BasicButtons variant='contained' action='Limpar' btnState={false} length={364} stature={50} />
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
         </div>
     )
