@@ -1,3 +1,14 @@
+@media (max-width: 420px) {
+    .action-list {
+        flex-direction: column;
+    }
+
+    .input-search {
+        margin-left: 0px;
+        width: 160px;
+    }
+}
+
 @media (max-width: 1110px) {
     .btn-add {
         width: 150px;
