@@ -83,7 +83,7 @@ function UpdateModal({ setStateModalUp, setShowLoading, showContacts, UpdatedId 
                     <div>
                         <form onSubmit={handleUpdate}>
                             <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} length={364} />
-                            <BasicButtons variant='contained' action='Adicionar' btnState={true} length={364} stature={50} />
+                            <BasicButtons variant='contained' action='Editar' btnState={true} length={364} stature={50} />
                         </form>
 
                         <div className='btn-clean' onClick={() => handleClearInputs()}>
