@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import UserContext from '../../context/userContext';
 import { useContext } from 'react';
 
-export default function BasicTextFields({ inputName, inputPassword, inputPhone, length }) {
+export default function BasicTextFields({ inputName, inputPassword, inputPhone }) {
 
     const { forms, setForms } = useContext(UserContext);
 
@@ -21,7 +21,7 @@ export default function BasicTextFields({ inputName, inputPassword, inputPhone, 
         <Box
             component="div"
             sx={{
-                '& > :not(style)': { m: 1, width: length },
+                '& > :not(style)': { m: 1, width: 'auto' },
             }}
             noValidate
             autoComplete="off"

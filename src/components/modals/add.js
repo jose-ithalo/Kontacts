@@ -82,7 +82,7 @@ function ModalCardAdd({ setStateModalAdd, setShowLoading, showContacts }) {
 
                     <div>
                         <form onSubmit={handleAddContact}>
-                            <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} length={364} />
+                            <BasicTextFields inputName={true} inputPassword={false} inputPhone={true} />
                             <BasicButtons variant='contained' action='Adicionar' btnState={true} length={364} stature={50} />
                         </form>
 

@@ -71,7 +71,7 @@ function Login() {
                     <h3>Bem vindo</h3>
                     <h1>Faça o login com sua conta</h1>
 
-                    <BasicTextFields inputName={false} inputPassword={true} inputPhone={false} length={470} />
+                    <BasicTextFields inputName={false} inputPassword={true} inputPhone={false} />
 
                     {errorAlert && <p className='error-alert'>Senha ou Email incorreto</p>}
                     {successAlert && <p className='success-alert'>Novo usuario Cadastrado com sucesso!</p>}

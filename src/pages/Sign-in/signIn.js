@@ -65,7 +65,7 @@ function SignIn() {
 
                 <form onSubmit={handleAddUser}>
                     <h2>Cadastre-se</h2>
-                    <BasicTextFields inputName={true} inputPassword={true} inputPhone={false} length={470} />
+                    <BasicTextFields inputName={true} inputPassword={true} inputPhone={false} />
 
                     {errorAlert && <p className='error-alert'>Email ou senha já cadastrados.</p>}
 
