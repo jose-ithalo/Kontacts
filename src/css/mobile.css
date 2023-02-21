@@ -1,4 +1,4 @@
-@media (max-width: 379px) {
+@media (max-width: 405px) {
     .MuiTextField-root {
         width: 260px;
     }
@@ -12,7 +12,7 @@
     }
 }
 
-@media (min-width: 380px) and (max-width: 1110px) {
+@media (min-width: 406px) and (max-width: 1110px) {
     .MuiTextField-root {
         width: 350px;
     }
