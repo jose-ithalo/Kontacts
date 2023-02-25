@@ -27,12 +27,7 @@ function MainPage() {
 
     const [stateModalAdd, setStateModalAdd] = useState(false);
 
-    // const [search, setSearch] = useState('');
-
-    // const filteredContacts = search.length > 0 ?
-    //     contactList.filter(function (data) {
-    //         return data.nome.toLowerCase().includes(search.toLowerCase());
-    //     }) : [];
+    const [search, setSearch] = useState('');
 
     async function showContacts() {
 
@@ -77,30 +72,12 @@ function MainPage() {
                         className='input-search'
                         placeholder='Pesquisar'
                         endAdornment={<SearchIcon />}
-                    // onChange={(evt) => setSearch(evt.target.value)}
+                        onChange={(evt) => setSearch(evt.target.value)}
                     />
 
                 </div>
 
-                <ContactsTable />
-
-                {/* {search.length > 0 ?
-
-                    filteredContacts.map((data) => (
-                        <div key={data.id}>
-                            <DataApi setStateModalDel={setStateModalDel} setStateModalUp={setStateModalUp} name={data.nome}
-                                email={data.email} phone={data.telefone} key={data.id} id={data.id}
-                                setInfoContact={setInfoContact} setShowLoading={setShowLoading} />
-                        </div>
-                    )) :
-
-                    contactList.map((data) => (
-                        <div key={data.id}>
-                            <DataApi setStateModalDel={setStateModalDel} setStateModalUp={setStateModalUp} name={data.nome}
-                                email={data.email} phone={data.telefone} key={data.id} id={data.id}
-                                setInfoContact={setInfoContact} setShowLoading={setShowLoading} />
-                        </div>
-                    ))} */}
+                <ContactsTable search={search} />
 
             </div>
 
