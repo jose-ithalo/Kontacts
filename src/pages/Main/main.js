@@ -3,7 +3,6 @@ import '../../css/mobile3.css';
 
 import ButtonAppBar from "../../components/headerMain/header";
 import BasicButtons from '../../components/buttons/button';
-// import DataApi from '../../components/datas/data';
 import ModalCardAdd from '../../components/modals/add';
 import DeleteModal from '../../components/modals/delete';
 import UpdateModal from '../../components/modals/update';
