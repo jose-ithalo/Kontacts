@@ -27,8 +27,6 @@ function Login() {
                 senha: forms.password
             })
 
-            console.log(response);
-
             const { token, usuario } = response.data;
 
             localStorage.setItem('token', token);
