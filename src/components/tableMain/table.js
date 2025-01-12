@@ -35,7 +35,6 @@ export default function ContactsTable({ search }) {
                         <TableCell align="left"></TableCell>
                     </TableRow>
                 </TableHead>
-                <div style={{ marginTop: '30px' }}></div>
                 <TableBody>
 
                     {search.length === 0 ?
