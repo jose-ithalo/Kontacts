@@ -45,7 +45,7 @@ function MainPage() {
         }
     }
 
-    async function callModalAdd() {
+    function callModalAdd() {
         setStateModalAdd(true);
 
         setShowLoading(false);
